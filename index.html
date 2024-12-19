@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <div class="main-window">
+      <div class="calculator background-color">
+        <div class="calculation-area" id="calculator">
+
+          <div class="display-window">
+            <div class="display-window-col">
+              <div class="overview-container">
+                <div id="overview" class="display-overview main-font"></div>
+              </div>
+              <div class="display-container">
+                <div id="display" class="display main-font">0</div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="input-buttons"></div>
+
+        </div>
+
+        <div class="history-tracking-area" id="history-area">
+
+          <h1 class="h1 main-font">History</h1>
+
+          <div class="history-container">
+            <div class="history main-font" id="history"></div>
+          </div>
+          
+          <div class="delete-history-container background-color">
+            <div class="delete-history" id="delete-history">
+              <img class="delete-history-img"
+              src="./assets/bin.svg" alt="trashcan">
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+
+    </div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

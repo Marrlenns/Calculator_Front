@@ -1,0 +1,254 @@
+/* Element classes */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+hr {
+  width: 100%;
+  border-color: rgba(129, 129, 129, 0.473);
+}
+
+/* High level classes */
+.background-color {
+  background-color: rgba(32,32,32,255);
+}
+.dark-grey {
+  background-color: rgba(50,50,50,255);
+}
+.dark-grey:hover {
+  background-color: rgba(59,59,59,255);
+}
+.dark-grey:active {
+  background-color: rgba(50,50,50,255);
+}
+.light-grey {
+  background-color: rgba(59,59,59,255);
+}
+.light-grey:hover {
+  background-color: rgba(50,50,50,255);
+}
+.light-grey:active {
+  background-color: rgba(32,32,32,255);
+}
+.grey {
+  background-color: rgba(166,165,161,255);
+}
+.grey:hover {
+  background-color: rgba(136,136,136,255);
+}
+.grey:active {
+  background-color: rgb(110, 110, 110);
+}
+.h1 {
+  color: white;
+  font-size: 35px;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 20px;
+  margin-bottom: 50px;
+}
+.main-font {
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Changing scroll bar styling */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #666666;
+  transition: all 0.22s ease-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #494949;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #ffffff;
+}
+
+/* Low level classes*/
+.main-window {
+  width: 100vw;
+  height: 100vh;
+}
+.calculator {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+.calculation-area {
+  transition: all 0.5s ease-out; 
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100vh;
+}
+.display-window {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 60px;
+  margin-top: 33px;
+  margin-bottom: 150px;
+  width: 100%;
+  height: 25%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.display-window-col {
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  right: 50px;
+  bottom: 12.5;
+}
+.overview-container {
+  display: flex;
+  position: relative;
+}
+.display-overview {
+  color: white;
+  position: absolute;
+  right: 0px;
+  top: -50px;
+  font-size: 1.9vw;
+  transition: 1s ease-in;
+}
+.display-container {
+  display: flex;
+  position: relative;
+  width: 100vw;
+}
+.display {
+  color: white;
+  position: absolute;
+  right: 0px;
+  top: -25px;
+  font-size: 4.5vw;
+  transition: 1s
+}
+.input-buttons {
+  margin-top: 20px;
+  height: 85%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  margin-bottom: 0.4%;
+}
+.input-buttons-row {
+  height: 100%;
+  align-items: stretch;
+  justify-content: center;
+  display: flex;
+  margin-top: 0.2%;
+}
+.input-button {
+  z-index: 3;
+  object-fit: contain;
+  flex: 1;
+  margin-left: 0.2%;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.15s ease-out;
+}
+.input-button-img {
+  width: 30px;
+  height: 30px;
+}
+.history-tracking-area {
+  transition: all 0.5s ease-out; 
+  position: relative;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.history-container {
+  width: 100%;
+  overflow-y: scroll;
+  scroll-margin: 50px;
+}
+.history {
+  color: white;
+  display: flex; 
+  flex-direction: column-reverse;
+  width: 100%;
+}
+.calculation {
+  position: relative; 
+  margin-bottom: 25px; 
+  width: 100%; 
+  height: 75px; 
+  border-radius: 15px;
+  transition: all 0.11s ease-in;
+}
+.calculation:hover {
+  background-color: rgb(53, 53, 53);
+}
+.calculation:active {
+  color: rgb(158, 158, 158);
+  font-size: 150%;
+  transform: translate(-1rem);
+}
+.expression {
+  position: absolute; 
+  right: 10px; 
+  top: 10px; 
+  font-size: 15px;
+}
+.answer {
+  position: absolute;
+  right: 10px; 
+  bottom: 10px; 
+  font-size: 150%; 
+  font-weight: 600;
+}
+.delete-history-container {
+  z-index: 2;
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+  width: 100%;
+  display: flex;
+}
+
+.delete-history, .delete-history-img {
+  transition: 0.12s ease-out;
+}
+
+.delete-history {
+  margin-left: 90%;
+  margin-bottom: 2%;
+  position: relative;
+}
+
+.delete-history:hover {
+  border-radius: 5px;
+  transform: translate(0rem, -0.3rem);
+}
+
+.delete-history:active {
+  transform: translate(-0.3rem, -0.5rem);
+}
+
+.delete-history-img {
+  width: 25px;
+  height: 25px;
+}
+
+.delete-history-img:active {
+  width: 30px;
+  height: 30px;
+}
